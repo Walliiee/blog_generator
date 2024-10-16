@@ -29,6 +29,8 @@ def generate_blog(paragraph_topic):
         return retrieve_blog
     except openai.error.OpenAIError as e:
         return f"An error occurred: {e}"
+    except Exception as e:
+        return f"An unexpected error occurred: {e}"
 
 if __name__ == "__main__":
     print(generate_blog('Why NYC is better than your city.'))
