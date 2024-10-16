@@ -1,2 +1,0 @@
-This is an example file.
-It demonstrates file operations in Python.
