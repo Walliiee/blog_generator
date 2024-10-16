@@ -33,4 +33,12 @@ def generate_blog(paragraph_topic):
         return f"An unexpected error occurred: {e}"
 
 if __name__ == "__main__":
-    print(generate_blog('Why NYC is better than your city.'))
+    keep_writing = True
+
+    while keep_writing:
+        answer = input('Write a paragraph? Y for yes, anything else for no. ')
+        if answer == 'Y':
+            paragraph_topic = input('What should this paragraph talk about? ')
+            print(generate_blog(paragraph_topic))
+        else:
+            keep_writing = False
